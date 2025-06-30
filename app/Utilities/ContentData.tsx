@@ -327,3 +327,33 @@ export const WhatWeTeachData = [
     buttonText: "Book A Free Class",
   },
 ];
+
+export const AccordionItems = [
+  {
+    title: "What is your return policy?",
+    content: (
+      <p>
+        You can return items within 30 days of purchase. Items must be in their
+        original condition.
+      </p>
+    ),
+  },
+  {
+    title: "How do I track my order?",
+    content: (
+      <p>
+        Once your order ships, you will receive a tracking number via email. You
+        can use this number on our tracking page.
+      </p>
+    ),
+  },
+  {
+    title: "Do you offer international shipping?",
+    content: (
+      <p>
+        Yes, we ship to most countries worldwide. Shipping fees and delivery
+        times vary by destination.
+      </p>
+    ),
+  },
+];

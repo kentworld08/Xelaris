@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${interSans.variable} ${geistSans.variable} ${geistMono.variable} ${spectral.variable}  antialiased bg-[#1D1F24] text-light`}
+        className={`${geistSans.variable} ${interSans.variable} ${geistMono.variable} ${spectral.variable}  antialiased bg-[#1D1F24] text-light`}
       >
         <Header />
         {children}
