@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --light: #fffefa;
+  --yellow69: #faff69;
+  --black24: #1d1f24;
+  --cyan60: #091717;
+  --whiteED: #f3f3ed;
+  --light-yellow-70-color: #fffefab2;
+}
+
+@theme {
+  --font-sans: var(--font-inter, system-ui), Helvetica, Arial, sans-serif;
+  --font-helvetica: Helvetica, Arial, sans-serif;
+  --font-serif: var(--font-spectral, serif);
 }
 
 @theme inline {
@@ -10,11 +22,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-light: var(--light);
+  --color-yellow69: var(--yellow69);
+  --color-black24: var(--black24);
+  --color-cyan60: var(--cyan60);
+  --color-whiteED: var(--whiteED);
+  --color-light-yellow-70: var(--light-yellow-70-color);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1d1f24;
     --foreground: #ededed;
   }
 }
