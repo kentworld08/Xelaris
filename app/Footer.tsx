@@ -6,65 +6,134 @@ const Footer = () => {
   return (
     <div>
       <footer className="hidden md:block px-[72px] h-[432px] bg-[#34353A]">
-        <div className="overflow-x-auto">
-          <div className="min-w-full table-auto text-left">
-            <div>
-              <div className="flex">
-                <p className="px-4 py-2 font-bold text-[#F2F0EB] text-[11.63px] uppercase leading-[15.6px] -tracking-[0.02px] align-middle font-sans">
-                  SITE MAP
-                </p>
-                <p className="px-4 py-2 font-bold text-[#F2F0EB] text-[11.63px] uppercase leading-[15.6px] -tracking-[0.02px] align-middle font-sans">
-                  SOCIAL
-                </p>
-                <p className="px-4 py-2 font-bold text-[#F2F0EB] text-[11.63px] uppercase leading-[15.6px] -tracking-[0.02px] align-middle font-sans">
-                  LEGAL
-                </p>
-              </div>
+        <div className="pt-[38.51px] min-w-full table-auto text-left flex pb-[51.49px]">
+          <div className="flex flex-col w-[338px]">
+            <h1 className="px-4 py-2 font-bold text-[#F2F0EB] text-[11.63px] uppercase leading-[15.6px] -tracking-[0.02px] align-middle font-sans">
+              SITE MAP
+            </h1>
+            <Link href="/" className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm hover:opacity-90 cursor-pointer">
+                About Us
+              </p>
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
+            </Link>
+            <Link href="/" className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm hover:opacity-90 cursor-pointer">
+                Contact Us
+              </p>
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
+            </Link>
+            <Link href="/" className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90cursor-pointer">
+                Pricing
+              </p>{" "}
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
+            </Link>
+            <Link href="/" className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90 cursor-pointer">
+                Careers
+              </p>
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
+            </Link>
+          </div>
+          <div className="flex flex-col w-[338px]">
+            <h1 className="px-4 py-2 font-bold text-[#F2F0EB] text-[11.63px] uppercase leading-[15.6px] -tracking-[0.02px] align-middle font-sans">
+              SOCIAL
+            </h1>
+            <Link href="/" className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90 cursor-pointer">
+                Instagram
+              </p>
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
+            </Link>
+            <Link href="/" className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90 cursor-pointer">
+                Twitter (X)
+              </p>{" "}
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
+            </Link>
+            <Link href="/" className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90 cursor-pointer">
+                Facebook
+              </p>{" "}
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
+            </Link>
+            <Link href="/" className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90 cursor-pointer">
+                Linkedin
+              </p>{" "}
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
+            </Link>
+          </div>
+          <div className="flex flex-col w-[338px]">
+            <h1 className="px-4 py-2 font-bold text-[#F2F0EB] text-[11.63px] uppercase leading-[15.6px] -tracking-[0.02px] align-middle font-sans">
+              LEGAL
+            </h1>
+            <div className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90 cursor-pointer">
+                Terms of Service
+              </p>{" "}
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
             </div>
-            <div>
-              <div className="flex">
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  About Us
-                </p>
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Instagram
-                </p>
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Terms of Service
-                </p>
-              </div>
-              <div className="flex">
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Contact Us
-                </p>
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Twitter (X)
-                </p>
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Privacy Policy
-                </p>
-              </div>
-              <div className="flex">
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Pricing
-                </p>
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Facebook
-                </p>
-                <p className="px-4 py-2 text-gray-600 text-sm"></p>{" "}
-              </div>
-              <div className="flex">
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Careers
-                </p>
-                <p className="px-4 py-2 text-gray-600 text-sm hover:text-blue-600 cursor-pointer">
-                  Linkedin
-                </p>
-                <p className="px-4 py-2 text-gray-600 text-sm"></p>{" "}
-              </div>
+            <div className="flex items-center gap-2">
+              <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90 cursor-pointer">
+                Privacy Policy
+              </p>{" "}
+              <Image
+                src="/termsIcon.png"
+                alt="Privacy Policy icon"
+                width={2.44}
+                height={6.4}
+              />
             </div>
           </div>
         </div>
+
         <hr className="border-[#FFFEFA80] mb-4" />
         <div className="w-full h-[118px] py-8 gap-[40px] flex justify-between items-center ">
           <div className="flex items-center gap-1">

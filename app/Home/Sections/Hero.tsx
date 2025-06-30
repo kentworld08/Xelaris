@@ -18,7 +18,7 @@ const HomePage = () => {
     <main className="h-fit  px-[20px] md:px-[72px] md:h-fit pt-[96px]">
       <section className="w-full flex justify-between items-center md:h-[640px] ">
         <div className=" space-y-[27px] md:space-y-[46.16px]">
-          <div className="w-[351px] h-[157px] md:w-[450px] md:h-[248px]">
+          <div className="w-[351px] h-[157px] md:w-[450px] md:h-[278px]">
             <h1 className="font-sans font-medium text-[35px] leading-[40px] tracking-normal align-middle md:text-[57.95px] md:leading-[60px]">
               {" "}
               The best place for kids/teens to learn tech skills.
