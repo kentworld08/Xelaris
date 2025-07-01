@@ -59,7 +59,7 @@ const WhatWeTeach = () => {
                   <div className="h-fit md:h-[78px] border-t-[0.5px] py-4 px-6 border-t-[#F3F3ED]">
                     <Link
                       href={route}
-                      className="h-[50px] rounded-[9999px] border-[1px] text-[#1D1F24] px-[21px] py-[9px] bg-primary flex items-center justify-center font-sans text-[16px] font-bold md:leading-6 md:w-[375px]"
+                      className="h-[50px] rounded-[9999px] border-[1px] text-[#1D1F24] px-[21px] py-[9px] bg-primary flex items-center justify-center font-sans text-[16px] font-bold md:leading-6 md:w-[375px] bg-yellow69"
                     >
                       {buttonText}
                     </Link>
