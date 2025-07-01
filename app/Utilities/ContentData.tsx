@@ -328,6 +328,225 @@ export const WhatWeTeachData = [
   },
 ];
 
+export const SchoolsData = [
+  {
+    title: "School of software  ",
+    spanText: "development",
+    typography:
+      "This self-paced course is designed for students to build skills in HTML, CSS and Javascript, the core languages of the web. By the end, they`ll be able to build fully functional web apps. ",
+    btnText: "Book A Free Class",
+    imageurl1: "/school.png",
+    imageurl2: "/panel-discussion.png",
+    learn: "What You`ll",
+    learnSpan: "Learn",
+    typography2:
+      "Every web or mobile application has two parts: a front-end and a back-end. The front-end is what the user sees and interacts with. It`s the app on your phone or the website you visit. So, front-end developers are in charge of building beautiful, interactive user interfaces.",
+    AccordionItems: [
+      {
+        title: "Introduction",
+        content: (
+          <p>
+            This curriculum is thoughtfully designed to equip students with a
+            strong foundation in software engineering principles while making
+            learning both fun and engaging. Through a progressive, structured
+            approach, students will master key coding concepts step by step
+            through Capstone course.
+          </p>
+        ),
+      },
+      {
+        title: "Basic HTML and CSS",
+        content: (
+          <p>
+            Once your order ships, you will receive a tracking number via email.
+            You can use this number on our tracking page.
+          </p>
+        ),
+      },
+      {
+        title: "Advance CSS",
+        content: (
+          <p>
+            Yes, we ship to most countries worldwide. Shipping fees and delivery
+            times vary by destination.
+          </p>
+        ),
+      },
+      {
+        title: "view all",
+        content: (
+          <p>
+            Yes, we ship to most countries worldwide. Shipping fees and delivery
+            times vary by destination.
+          </p>
+        ),
+      },
+    ],
+  },
+  {
+    title: "School of product  ",
+    spanText: "design",
+    typography:
+      "This course introduces UX/UI design, covering design thinking, problem-solving, sketching, and prototyping. Kids will gain hands-on experience with industry tools and build the skills needed to tackle more advanced design.",
+    btnText: "Book A Free Class",
+    imageurl1: "/school.png",
+    imageurl2: "/productDesign.png",
+    learn: "What You`ll",
+    learnSpan: "Learn",
+    typography2:
+      "Product Designers, also known as UX/UI Designers, are the creative minds behind the look and feel of the apps and websites you use every day. They research, sketch, and refine everything you touch and see on your phone and computer. From tech startups to major brands across all industries, companies rely on Product Designers to create experiences people love.",
+    AccordionItems: [
+      {
+        title: "Introduction",
+        content: (
+          <p>
+            This curriculum is thoughtfully designed to equip students with a
+            strong foundation in software engineering principles while making
+            learning both fun and engaging. Through a progressive, structured
+            approach, students will master key coding concepts step by step
+            through Capstone course.
+          </p>
+        ),
+      },
+      {
+        title: "Basic HTML and CSS",
+        content: (
+          <p>
+            Once your order ships, you will receive a tracking number via email.
+            You can use this number on our tracking page.
+          </p>
+        ),
+      },
+      {
+        title: "Advance CSS",
+        content: (
+          <p>
+            Yes, we ship to most countries worldwide. Shipping fees and delivery
+            times vary by destination.
+          </p>
+        ),
+      },
+      {
+        title: "view all",
+        content: (
+          <p>
+            Yes, we ship to most countries worldwide. Shipping fees and delivery
+            times vary by destination.
+          </p>
+        ),
+      },
+    ],
+  },
+  {
+    title: "School of artificial  ",
+    spanText: "intelligence",
+    typography:
+      "This course introduces UX/UI design, covering design thinking, problem-solving, sketching, and prototyping. Kids will gain hands-on experience with industry tools and build the skills needed to tackle more advanced design.",
+    btnText: "Book A Free Class",
+    imageurl1: "/school.png",
+    imageurl2: "/artificialIntelligence.png",
+    learn: "What You`ll",
+    learnSpan: "Learn",
+    typography2:
+      "Artificial Intelligence, or AI, is technology that enables machines to think, learn, and adapt much like humans do. It processes information, makes decisions, and even improves over time just like our brains! Tools like Siri and Alexa use AI to understand your questions and help with tasks. In short, AI is everywhere helping us solve problems, stay entertained, and live more efficiently!",
+    AccordionItems: [
+      {
+        title: "Introduction",
+        content: (
+          <p>
+            This curriculum is thoughtfully designed to equip students with a
+            strong foundation in software engineering principles while making
+            learning both fun and engaging. Through a progressive, structured
+            approach, students will master key coding concepts step by step
+            through Capstone course.
+          </p>
+        ),
+      },
+      {
+        title: "Basic HTML and CSS",
+        content: (
+          <p>
+            Once your order ships, you will receive a tracking number via email.
+            You can use this number on our tracking page.
+          </p>
+        ),
+      },
+      {
+        title: "Advance CSS",
+        content: (
+          <p>
+            Yes, we ship to most countries worldwide. Shipping fees and delivery
+            times vary by destination.
+          </p>
+        ),
+      },
+      {
+        title: "view all",
+        content: (
+          <p>
+            Yes, we ship to most countries worldwide. Shipping fees and delivery
+            times vary by destination.
+          </p>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Web3 developer  ",
+    spanText: "beginner",
+    typography:
+      "This course introduces UX/UI design, covering design thinking, problem-solving, sketching, and prototyping. Kids will gain hands-on experience with industry tools and build the skills needed to tackle more advanced design.",
+    btnText: "Book A Free Class",
+    imageurl1: "/school.png",
+    imageurl2: "/developer.png",
+    learn: "What You`ll",
+    learnSpan: "Learn",
+    typography2:
+      "Web3, or the decentralized web, represents the next evolution of the internet where users have more control over their data, digital assets, and online interactions. Unlike today's internet (Web2) where big tech companies like Google, Facebook, and Amazon control most of our data and digital lives, Web3 puts that power back into users' hands.",
+    AccordionItems: [
+      {
+        title: "Introduction",
+        content: (
+          <p>
+            This curriculum is thoughtfully designed to equip students with a
+            strong foundation in software engineering principles while making
+            learning both fun and engaging. Through a progressive, structured
+            approach, students will master key coding concepts step by step
+            through Capstone course.
+          </p>
+        ),
+      },
+      {
+        title: "Basic HTML and CSS",
+        content: (
+          <p>
+            Once your order ships, you will receive a tracking number via email.
+            You can use this number on our tracking page.
+          </p>
+        ),
+      },
+      {
+        title: "Advance CSS",
+        content: (
+          <p>
+            Yes, we ship to most countries worldwide. Shipping fees and delivery
+            times vary by destination.
+          </p>
+        ),
+      },
+      {
+        title: "view all",
+        content: (
+          <p>
+            Yes, we ship to most countries worldwide. Shipping fees and delivery
+            times vary by destination.
+          </p>
+        ),
+      },
+    ],
+  },
+];
+
 export const AccordionItems = [
   {
     title: "What is your return policy?",
