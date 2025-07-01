@@ -1,7 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
-import { PrimaryButton, SecondaryButton } from "@/app/Utilities/Button";
+import { PrimaryButton, SecondaryButton } from "@/components/ui/Button";
 import Link from "next/link";
 import BuildRealProjects from "./BuildRealProjects";
 import WhatWeTeach from "./WhatWeTeach";

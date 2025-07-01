@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 // import { IoChevronForwardCircleOutline } from "react-icons/io5";
 import Link from "next/link";
-import { WhatWeTeachData } from "@/app/Utilities/ContentData";
+import { WhatWeTeachData } from "@/components/ContentData";
 
 const WhatWeTeach = () => {
   return (

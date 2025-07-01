@@ -1,4 +1,4 @@
-import { ParentReviewsData } from "@/app/Utilities/ContentData";
+import { ParentReviewsData } from "@/components/ContentData";
 import Image from "next/image";
 export function ParentReviewsCarousel() {
   return (

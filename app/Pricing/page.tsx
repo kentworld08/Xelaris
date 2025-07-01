@@ -1,5 +1,5 @@
 import React from "react";
-import { PricingData } from "../Utilities/ContentData";
+import { PricingData } from "@/components/ContentData";
 import Link from "next/link";
 
 const Pricing = () => {

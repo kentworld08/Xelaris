@@ -1,5 +1,5 @@
 import React from "react";
-import { TeamData } from "../Utilities/ContentData";
+import { TeamData } from "@/components/ContentData";
 import Image from "next/image";
 
 const AboutPage = () => {

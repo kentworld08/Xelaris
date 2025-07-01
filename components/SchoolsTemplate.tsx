@@ -1,8 +1,8 @@
 import StudentBuilding from "@/app/Home/Sections/StudentBuilding";
 import StudentBuildings from "@/app/Home/Sections/StudentBuildingsTemplate";
-import { MyCustomAccordion } from "@/app/Utilities/Accordion";
-import { SecondaryButton } from "@/app/Utilities/Button";
-import { SchoolsData, AccordionItems } from "@/app/Utilities/ContentData";
+import { MyCustomAccordion } from "@/components/ui/Accordion";
+import { SecondaryButton } from "@/components/ui/Button";
+import { AccordionItems, SchoolsData } from "@/components/ContentData";
 import Image from "next/image";
 
 const SchoolsTemplateContent = (spanText: string) => {

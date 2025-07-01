@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { StudentBuildingData } from "@/app/Utilities/ContentData";
-import { PrimaryButton } from "@/app/Utilities/Button";
+import { StudentBuildingData } from "@/components/ContentData";
+import { PrimaryButton } from "@/components/ui/Button";
 
 const StudentBuildings = () => {
   return (

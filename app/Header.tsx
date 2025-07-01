@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { PrimaryButton, SecondaryButton } from "./Utilities/Button";
+import { PrimaryButton, SecondaryButton } from "@/components/ui/Button";
 
 // import { RiArrowDropDownLine } from "react-icons/ri";
 

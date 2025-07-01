@@ -1,4 +1,4 @@
-import { WhatMakesUsDifferentData } from "@/app/Utilities/ContentData";
+import { WhatMakesUsDifferentData } from "@/components/ContentData";
 import Link from "next/link";
 
 const WhatMakesUsDifferent = () => {

@@ -25,7 +25,7 @@ const SecondaryButton = ({ title, width, onclick }: ButtonProps) => {
       onClick={() => onclick}
       style={{ width: width }}
       type="button"
-      className=" h-[42px] rounded-4xl border-[1px] text-black24 px-[25pxpx] py-[13px] bg-yellow69 flex items-center justify-center font-sans text-[15.88px] font-medium leading-[24px] tracking-normal align-middle cursor-pointer"
+      className=" h-[42px] rounded-4xl border-[1px] text-black24 px-[25pxpx] py-[13px] bg-yellow69 flex items-center justify-center font-sans text-[15.88px] font-medium leading-[24px] tracking-normal align-middle cursor-pointer border-none hover:opacity-90"
     >
       {title}
     </button>

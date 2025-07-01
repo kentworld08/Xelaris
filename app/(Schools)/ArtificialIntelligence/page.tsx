@@ -1,4 +1,4 @@
-import SchoolsTemplateContent from "@/app/Utilities/SchoolsTemplate";
+import SchoolsTemplateContent from "@/components/SchoolsTemplate";
 
 const ArtificialIntel = () => {
   return SchoolsTemplateContent("intelligence");
