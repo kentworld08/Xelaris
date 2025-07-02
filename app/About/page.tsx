@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutPage = () => {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden pb-[90px]">
       <section className="h-[488px] p-[64px] gap-[20px] w-full flex flex-col items-center justify-center  bg-[url('/aboutBg.png')] bg-cover bg-no-repeat bg-center md:h-[810px]">
         <div className="w-[392px] h-[75px] flex justify-center md:w-[501px] md:h-[75px]">
           <h1 className="font-sans font-normal text-[25px] leading-[74.4px] -tracking-[0.24px] text-light align-middle md:-tracking-[3.2px] md:text-[48.32px]">
@@ -32,9 +32,9 @@ const AboutPage = () => {
       </section>
       <section className="px-[20px] md:px-[72px] ">
         <div className="w-[342px] h-[40px] mt-[74px] md:w-[213px] md:h-[85px]">
-          <h1 className="font-sans font-normal text-[28px] leading-[40px] tracking-normal align-middle text-light md:text-[39.88px] md:-tracking-[0.85px] md:leading-[85px]">
+          <h1 className="font-sans font-normal text-[28px] leading-[40px] tracking-normal text-light md:text-[39.88px] md:-tracking-[0.85px] md:leading-[85px]">
             Our{" "}
-            <span className="font-serif font-normal text-[35.9px] leading-[40px] tracking-normal align-middle text-light md:leading-[85px] md:text-[60.3px] md:-tracking-[0.85px]">
+            <span className="font-serif font-normal text-[35.9px] leading-[40px] tracking-normal text-light md:leading-[85px] md:text-[60.3px] md:-tracking-[0.85px]">
               Team
             </span>{" "}
           </h1>

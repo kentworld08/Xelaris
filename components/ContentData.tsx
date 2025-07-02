@@ -246,6 +246,13 @@ export const ParentReviewsData = [
     imageUrl: "/kateryna.png",
   },
   {
+    name: "Kateryna",
+    country: "Canada",
+    testimony:
+      "I am thrilled to share my experience with my son's experience at Xelaris! As a parent, I find the organization to be impeccable, making everything easy and straightforward. My 11-year-old is absolutely engaged and progressing remarkably with his coding skills.  What I appreciate most is how the projects are designed to be relatable to real-life situations. For instance, simulating a banking machine not only teaches coding but also introduces important finance concepts in a fun and interactive way. This creative approach to learning really sets this program apart. ",
+    imageUrl: "/kateryna.png",
+  },
+  {
     name: "Alice ",
     country: "Indonesia",
     testimony:
@@ -258,6 +265,20 @@ export const ParentReviewsData = [
     testimony:
       "The one-on-one classes at Xelaris have been amazing for us! My daughter usually struggles with online learning because it feels so impersonal, but this is completely different. She actually gets excited for her sessions now! Her teacher Amelia is incredible she's so patient and really knows how to keep kids engaged. What I really love as a parent is getting those detailed session notes after each class. I can see exactly what she learned and worked on. Plus, the flexible scheduling has been a lifesaver. We can easily reschedule when things come up ",
     imageUrl: "/mohammed.png",
+  },
+  {
+    name: "Mohammed ",
+    country: "Dubia",
+    testimony:
+      "The one-on-one classes at Xelaris have been amazing for us! My daughter usually struggles with online learning because it feels so impersonal, but this is completely different. She actually gets excited for her sessions now! Her teacher Amelia is incredible she's so patient and really knows how to keep kids engaged. What I really love as a parent is getting those detailed session notes after each class. I can see exactly what she learned and worked on. Plus, the flexible scheduling has been a lifesaver. We can easily reschedule when things come up ",
+    imageUrl: "/mohammed.png",
+  },
+  {
+    name: "Hameed ",
+    country: "United States",
+    testimony:
+      "As a software engineer, I can confidently say that Xelaris is an exceptional company for teaching children programming in a fun and engaging way. They teach real technologies that are used in the workplace. My daughter, Ava, is taking web development classes. She started with HTML, progressed to CSS, and has created projects she's genuinely proud of. She loves her instructor and always looks forward to her class. I would highly recommend Xelaris to any parent looking to introduce their child to tech. ",
+    imageUrl: "/hammeed.png",
   },
   {
     name: "Hameed ",
@@ -311,10 +332,34 @@ export const WhatWeTeachData = [
     buttonText: "Book A Free Class",
   },
   {
+    title: "School of Product Design",
+    status: "Online",
+    level: "1:1 Class",
+    imageUrl: "/softwareDevelopment.png",
+    route: "#",
+    buttonText: "Book A Free Class",
+  },
+  {
+    title: "School of Mechanical Engineering",
+    status: "Online",
+    level: "1:1 Class",
+    imageUrl: "/artficialIntelligence.png",
+    route: "#",
+    buttonText: "Book A Free Class",
+  },
+  {
     title: "School of Artificial Intelligence",
     status: "Online",
     level: "1:1 Class",
     imageUrl: "/artficialIntelligence.png",
+    route: "#",
+    buttonText: "Book A Free Class",
+  },
+  {
+    title: "School of Data Analysis",
+    status: "Online",
+    level: "1:1 Class",
+    imageUrl: "/blockchainTechnology.png",
     route: "#",
     buttonText: "Book A Free Class",
   },
