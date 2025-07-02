@@ -141,7 +141,7 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-4">
           <Link
-            href="/LoginSingUp"
+            href="/LoginSignUp"
             className="text-white font-normal text-[15.88px] leading-6 tracking-normal align-middle font-sans hidden md:block"
           >
             Login

@@ -51,10 +51,10 @@ const HomePage = () => {
           </div>
 
           <div className="w-[351px] h-[54px] pt-[4px] gap-[16px] flex">
-            <Link href="/">
+            <Link href="/Form">
               <SecondaryButton width="188px" title="Book A Free Class" />
             </Link>
-            <Link href="/">
+            <Link href="/LoginSignUp">
               <PrimaryButton title="Signup" width="103px" maxWidth="351px" />
             </Link>
           </div>
