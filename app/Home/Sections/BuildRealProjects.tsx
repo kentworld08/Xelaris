@@ -4,6 +4,7 @@ const BuildRealProjects = () => {
   return (
     <section className="mt-[95.59px] p-[72px] flex flex-col justify-between items-center px-[20px] md:flex-row">
       <div>
+        {" "}
         <div className="w-full space-y-[13px]">
           <h5 className="font-sans font-semibold text-[14.98px] leading-[22.68px] tracking-normal align-middle text-light-yellow-70 w-full">
             Software | AI | Blockchain

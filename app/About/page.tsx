@@ -5,13 +5,13 @@ import Image from "next/image";
 const AboutPage = () => {
   return (
     <main className="overflow-hidden pb-[90px]">
-      <section className="h-[488px] p-[64px] gap-[20px] w-full flex flex-col items-center justify-center  bg-[url('/aboutBg.png')] bg-cover bg-no-repeat bg-center md:h-[810px]">
+      <section className="h-[488px] p-[64px] gap-[20px] w-full flex flex-col items-center justify-center  bg-[url('/aboutBg.png')] bg-cover bg-no-repeat bg-center md:h-[810px] px-[20px]">
         <div className="w-[392px] h-[75px] flex justify-center md:w-[501px] md:h-[75px]">
-          <h1 className="font-sans font-normal text-[25px] leading-[74.4px] -tracking-[0.24px] text-light align-middle md:-tracking-[3.2px] md:text-[48.32px]">
+          <h1 className="font-sans font-normal text-[25px] leading-[74.4px] -tracking-[0.24px] text-light md:-tracking-[3.2px] md:text-[48.32px]">
             About
           </h1>{" "}
           &nbsp;
-          <span className="font-serif font-light italic text-[35.9px] leading-[74.4px] -tracking-[0.24px] align-middle text-light md:-tracking-[3.2px] md:text-[60.3px]">
+          <span className="font-serif font-light italic text-[35.9px] leading-[74.4px] -tracking-[0.24px] text-light md:-tracking-[3.2px] md:text-[60.3px]">
             Xelaris
           </span>
         </div>
@@ -22,7 +22,7 @@ const AboutPage = () => {
             the intersection of both.
           </p>
         </div>
-        <div className="w-[390px] h-[86px] max-w-[1440px] md:w-[655px] md:h-[90px]">
+        <div className="w-[340px] h-[86px] max-w-[1440px] md:w-[655px] md:h-[90px]">
           <p className="font-sans font-normal text-[18px] leading-[21.6px] -tracking-[0.24px] align-middle text-light text-center md:text-[20px] md:tracking-normal md:leading-[27px]">
             We are educators, designers, and engineers who believe in pushing
             boundaries to create engaging, innovative, and meaningful learning
@@ -39,7 +39,7 @@ const AboutPage = () => {
             </span>{" "}
           </h1>
         </div>
-        <div className="w-[330px] h-[110.28px] pt-[23.28px] md:w-[590px] md:h-[80px] md:pt-[24px]">
+        <div className="w-[320px] h-[110.28px] pt-[23.28px] md:w-[590px] md:h-[80px] md:pt-[24px] mb-5">
           <p className="font-sans font-normal text-[16px] leading-[21.6px] tracking-[0.18px] align-middle text-light">
             They`re We believe there`s nothing more powerful than using your
             skills to make a difference. Meet the team who are building the
@@ -50,14 +50,14 @@ const AboutPage = () => {
           {TeamData.map((team, index) => (
             <div
               key={team.name + "" + index}
-              className="border-[1px] border-[#E2E3D3] w-[372px] md:w-[266px]"
+              className="border-[1px] border-[#E2E3D3] w-full md:w-[266px]"
             >
               <Image
                 src={team.imageUrl}
                 alt={team.name}
                 height={247}
                 width={372}
-                className="w-[372px] h-[247px] md:w-[264px] md:h-[202px]"
+                className="w-full h-[247px] md:w-[264px] md:h-[202px]"
               />
               <div className="w-full h-[100px] py-[16px] px-[14px] gap-[8px] flex flex-col">
                 <h1 className="font-sans font-bold text-[24px] leading-[28.8px] -tracking-[0.32px] align-middle text-yellow69">

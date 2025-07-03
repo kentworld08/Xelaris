@@ -116,8 +116,8 @@ export default function StepOne() {
             {...register("phoneNumber")}
             placeholder={
               currentCountry
-                ? `e.g., ${currentCountry.minLength || ""} to ${
-                    currentCountry.maxLength || ""
+                ? `e.g., ${currentCountry.minLength ?? ""} to ${
+                    currentCountry.maxLength ?? ""
                   } digits`
                 : "Enter phone number"
             }

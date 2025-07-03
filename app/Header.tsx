@@ -5,7 +5,7 @@ import Image from "next/image";
 import { PrimaryButton, SecondaryButton } from "@/components/ui/Button";
 
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -19,6 +19,15 @@ const Header = () => {
   // Handles mouse leaving both link and dropdown area
   const handleMouseLeave = () => {
     setHoveredMenu(null);
+  };
+
+  const handleNavClick = (event: React.MouseEvent<HTMLElement>) => {
+    const target = (event.target as HTMLElement).closest("a");
+
+    if (target) {
+      // If a Link or <a> was clicked, then close the navigation
+      setOpen(false);
+    }
   };
 
   return (
@@ -115,7 +124,7 @@ const Header = () => {
                   Product Design
                 </Link>
                 <Link
-                  href="ArtificialIntelligence"
+                  href="/ArtificialIntelligence"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
                   Artificial Intelligence
@@ -183,21 +192,26 @@ const Header = () => {
 
           {/* Menu overlay */}
           <div
-            className={`fixed top-[60px] left-0 h-full w-full bg-black24 bg-opacity-80 z-50 transition-transform duration-300 md:hidden ${
+            className={`fixed top-[60px] left-0 h-full w-full bg-black24 opacity-98 z-50 transition-transform duration-300 md:hidden ${
               open ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <nav className="flex flex-col p-6 space-y-6 text-white text-lg">
-              <a href="#" onClick={() => setOpen(false)}></a>
-              <a href="#" onClick={() => setOpen(false)}>
-                Company
-              </a>
-              <a href="#" onClick={() => setOpen(false)}>
-                Schools
-              </a>
-              <Link href="/Pricing" onClick={() => setOpen(false)}>
-                Pricing
+            <nav
+              className="flex flex-col p-6 space-y-6 text-white text-lg"
+              onClick={handleNavClick}
+            >
+              {/* The empty <a> tag - consider if it's necessary. If so, prevent its default behavior. */}
+              <a href="#" onClick={(e) => e.preventDefault()}></a>
+              <Link href="/About">About Xelaris</Link>
+              <Link href="/ContactUs">Get in Touch</Link>
+              <Link href="/Software">Software Development</Link>
+              <Link href="/ProductDesign">Product Design</Link>
+              <Link href="/ArtificialIntelligence">
+                Artificial Intelligence
               </Link>
+              <Link href="/Web3Developer">Web3 Developer</Link>
+              <Link href="/Pricing">Pricing</Link>
+              <Link href="/LoginSignUp">Login</Link>
             </nav>
           </div>
         </>

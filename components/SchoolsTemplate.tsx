@@ -10,11 +10,11 @@ const SchoolsTemplateContent = (spanText: string) => {
     (data) => data.spanText.toLowerCase() === spanText.toLocaleLowerCase()
   );
   return (
-    <main className="px-[20px] md:px-[72px]">
+    <main className="px-[20px] md:px-[72px] overflow-hidden">
       <section className="py-[64px] gap-[64px] flex flex-col md:flex-row justify-between md:pt-[72px] items-center">
         <div className="w-full h-[300px] gap-[20.38px] flex flex-col md:w-[712px] md:h-[351.51px] md:max-w-[872px] md:gap-[23.3px]">
           <div className="h-[86.38px] w-[388px] md:w-[560px] md:h-[153.22px]">
-            <h1 className="font-sans font-medium text-[43.03px] leading-[43.2px] tracking-normal md:text-[57.95px] md:leading-[76.62px] text-light">
+            <h1 className="font-sans font-medium text-[34.03px] leading-[43.2px] tracking-normal md:text-[57.95px] md:leading-[76.62px] text-light">
               {data?.title}
               <span className="font-serif font-light italic text-[40px] leading-[43.2px] tracking-normal md:text-[60.3px] md:leading-[76.62px]">
                 {data?.spanText}

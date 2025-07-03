@@ -36,7 +36,7 @@ export function ParentReviewsCarousel() {
     <div>
       <div
         ref={scrollRef}
-        className="h-fit md:h-[740px] flex md:flex-row justify-between gap-[48px] pt-[38.83px] overflow-x-auto scroll-smooth flex-row"
+        className="h-fit md:h-[740px] flex md:flex-row justify-between gap-[48px] pt-[38.83px] overflow-x-hidden scroll-smooth flex-row"
       >
         {ParentReviewsData.map((item, index) => (
           <div

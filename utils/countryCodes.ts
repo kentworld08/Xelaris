@@ -15,7 +15,7 @@ export const countryCodes: CountryCode[] = [
     code: "+234",
     iso: "NG",
     minLength: 7,
-    maxLength: 10,
+    maxLength: 11,
     regex: /^(70|80|81|90)\d{8}$/,
   },
   {

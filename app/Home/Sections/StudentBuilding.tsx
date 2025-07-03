@@ -1,6 +1,6 @@
 const StudentBuilding = () => {
   return (
-    <section className="flex flex-col justify-center items-center md:py-[112px] px-[20px] pt-[96px] pb-[64px]">
+    <section className="flex flex-col justify-center items-center md:py-[112px] pt-[96px] pb-[64px] text-center w-full">
       <h3 className="md:text-[14.98px] md:leading-[22.68px] font-sans font-semibold tracking-normal align-middle text-[#FFFEFA80]">
         Software | AI | Blockchain
       </h3>
@@ -10,7 +10,7 @@ const StudentBuilding = () => {
           students are building
         </span>
       </h1>
-      <p className="md:w-[670px] md:text-[16px] md:leading-[22.68px] tracking-normal align-middle font-sans text-[#FFFEFAB2] text-center text-[15.88px] leading-[21px] font-light">
+      <p className="md:w-[670px] md:text-[16px] md:leading-[22.68px] tracking-normal align-middle font-sans text-[#FFFEFAB2] text-center text-[15.88px] leading-[21px] font-light w-[351px]">
         From mobile apps to AI tools to full web applications; these aren`t just
         classroom exercises. They`re real projects that showcase technical
         growth, creative thinking, and the problem-solving confidence our

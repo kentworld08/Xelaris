@@ -15,6 +15,7 @@ const spectral = Spectral({
 const interSans = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistSans = Geist({
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={interSans.variable}>
       <body
         className={`${geistSans.variable} ${interSans.variable} ${geistMono.variable} ${spectral.variable}  antialiased bg-[#1D1F24] text-light`}
       >

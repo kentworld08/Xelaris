@@ -11,7 +11,7 @@ const Footer = () => {
             <h1 className="px-4 py-2 font-bold text-[#F2F0EB] text-[11.63px] uppercase leading-[15.6px] -tracking-[0.02px] align-middle font-sans">
               SITE MAP
             </h1>
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/About" className="flex items-center gap-2">
               <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm hover:opacity-90 cursor-pointer">
                 About Us
               </p>
@@ -22,7 +22,7 @@ const Footer = () => {
                 height={6.4}
               />
             </Link>
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/ContactUs" className="flex items-center gap-2">
               <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm hover:opacity-90 cursor-pointer">
                 Contact Us
               </p>
@@ -33,7 +33,7 @@ const Footer = () => {
                 height={6.4}
               />
             </Link>
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/Pricing" className="flex items-center gap-2">
               <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90cursor-pointer">
                 Pricing
               </p>{" "}
@@ -44,7 +44,7 @@ const Footer = () => {
                 height={6.4}
               />
             </Link>
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/Software" className="flex items-center gap-2">
               <p className="px-4 py-2 text-[#F2F0EB] font-sans text-[20px] leading-[30px] -tracking-[0.02px] align-middle text-sm  hover:opacity-90 cursor-pointer">
                 Careers
               </p>
