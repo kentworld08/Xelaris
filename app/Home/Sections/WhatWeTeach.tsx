@@ -5,6 +5,7 @@ import Image from "next/image";
 import { IoChevronForwardCircleOutline } from "react-icons/io5";
 import Link from "next/link";
 import { WhatWeTeachData } from "@/components/ContentData";
+import InteractiveParagraph from "@/utils/InteractiveParagraph";
 
 const WhatWeTeach = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -70,6 +71,11 @@ const WhatWeTeach = () => {
     }
   };
 
+  const myParagraph1 =
+    "We teach Software Engineering, AI, Blockchain through a curriculum";
+  const myParagraph2 =
+    "  that helps kids become confident problem-solvers, and future-ready builders.";
+
   return (
     <section className="px-[20px]">
       <div className="w-full h-[304px] pt-[64px] pb-[64px] space-y-[12px]">
@@ -83,10 +89,9 @@ const WhatWeTeach = () => {
         </div>
         <div className="w-full flex items-center justify-center align-middle">
           <p className="w-[276px] font-sans text-[15.88px] leading-[24px] tracking-normal align-middle text-light-yellow-70 font-normal text-center justify-self-center md:w-[768px]">
-            We teach Software Engineering, AI, Blockchain through a curriculum{" "}
+            <InteractiveParagraph text={myParagraph1} />
             <br className="hidden md:block" />
-            that helps kids become confident problem-solvers, and future-ready
-            builders.
+            <InteractiveParagraph text={myParagraph2} />
           </p>
         </div>
       </div>

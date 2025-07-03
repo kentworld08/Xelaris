@@ -1,6 +1,10 @@
+import InteractiveParagraph from "@/utils/InteractiveParagraph";
 import React from "react";
 
 const StudentSportlight = () => {
+  const myParagraph =
+    "Celebrating the hard work, talent, and growth of our students as they excel in competitions and present their innovative projects.";
+
   return (
     <section className="w-full h-fit gap-8 flex md:justify-between md:flex-row flex-col md:pb-[104px]">
       <div className="w-full md:w-[495px] h-fit md:h-[1169px] space-y-[16px]">
@@ -14,8 +18,7 @@ const StudentSportlight = () => {
         </div>
         <div className="w-full md:w-[399px] h-fit md:h-[76px] opacity-70 ">
           <p className="font-sans font-normal text-[16px] leading-[22.4px] tracking-normal align-middle text-[#F3F3ED] w-[340px] md:text-[17.8px] md:leading-[25.2px] md:w-[400px]">
-            Celebrating the hard work, talent, and growth of our students as
-            they excel in competitions and present their innovative projects.
+            <InteractiveParagraph text={myParagraph} />
           </p>
         </div>
       </div>

@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 
 import {
   stepOneFields,
@@ -36,6 +37,7 @@ const formSteps = [
 
 export default function MultiStepForm() {
   const [currentStep, setCurrentStep] = useState(0);
+  const router = useRouter();
 
   const methods = useForm<FullFormValues>({
     resolver: zodResolver(fullFormSchema), // Use the full schema for overall validation
@@ -79,6 +81,7 @@ export default function MultiStepForm() {
   const onSubmit = async (data: FullFormValues) => {
     console.log("Final Form Data:", data);
 
+    router.push("/Success");
     methods.reset();
     setCurrentStep(0);
   };

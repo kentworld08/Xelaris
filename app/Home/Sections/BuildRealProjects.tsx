@@ -1,6 +1,9 @@
+import InteractiveParagraph from "@/utils/InteractiveParagraph";
 import Image from "next/image";
 
 const BuildRealProjects = () => {
+  const myParagraph =
+    "No prior knowledge needed. We introduce students to software engineering, AI and blockchain through guided, practical learning. While building real-world projects takes time, within a few months, our students gain solid foundations and start working on exciting projects that showcase their growing abilities.";
   return (
     <section className="mt-[95.59px] p-[72px] flex flex-col justify-between items-center px-[20px] md:flex-row">
       <div>
@@ -19,11 +22,7 @@ const BuildRealProjects = () => {
           </div>
 
           <p className="w-full font-sans font-normal text-[16px] leading-[22.68px] tracking-normal align-middle text-light-yellow-70 md:w-[539px]">
-            No prior knowledge needed. We introduce students to software
-            engineering, AI and blockchain through guided, practical learning.
-            While building real-world projects takes time, within a few months,
-            our students gain solid foundations and start working on exciting
-            projects that showcase their growing abilities.
+            <InteractiveParagraph text={myParagraph} />
           </p>
         </div>
       </div>

@@ -155,7 +155,9 @@ const Header = () => {
           >
             Login
           </Link>
-          <PrimaryButton title="Book A Free Class" width="181px" />
+          <Link href="/Form">
+            <PrimaryButton title="Book A Free Class" width="181px" />
+          </Link>
         </div>
         <div className="md:hidden flex items-center gap-4">
           <Link href="/Form">
@@ -174,7 +176,7 @@ const Header = () => {
             <div className="space-y-1">
               <span
                 className={`block h-0.5 w-6 bg-white transition-transform ${
-                  open ? "rotate-45 translate-y-1.5" : ""
+                  open && "rotate-45 translate-y-1.5"
                 }`}
               />
               <span
@@ -184,7 +186,7 @@ const Header = () => {
               />
               <span
                 className={`block h-0.5 w-6 bg-white transition-transform ${
-                  open ? "-rotate-45 -translate-y-1.5" : ""
+                  open && "-rotate-45 -translate-y-1.5"
                 }`}
               />
             </div>
@@ -200,7 +202,6 @@ const Header = () => {
               className="flex flex-col p-6 space-y-6 text-white text-lg"
               onClick={handleNavClick}
             >
-              {/* The empty <a> tag - consider if it's necessary. If so, prevent its default behavior. */}
               <a href="#" onClick={(e) => e.preventDefault()}></a>
               <Link href="/About">About Xelaris</Link>
               <Link href="/ContactUs">Get in Touch</Link>

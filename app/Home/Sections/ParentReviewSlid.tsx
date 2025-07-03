@@ -1,6 +1,7 @@
 "use client";
 
 import { ParentReviewsData } from "@/components/ContentData";
+import InteractiveParagraph from "@/utils/InteractiveParagraph";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
@@ -65,7 +66,7 @@ export function ParentReviewsCarousel() {
 
                 <div className="flex space-x-2 mt-4">
                   <span className="w-full md:w-[268px] font-sans font-normal text-[14px] leading-[21px] tracking-normal align-middle text-light-yellow-70">
-                    {item.testimony}
+                    <InteractiveParagraph text={item.testimony} />
                   </span>
                 </div>
               </div>

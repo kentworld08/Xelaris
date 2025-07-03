@@ -3,6 +3,7 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 const loginSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
   password: z
@@ -14,6 +15,8 @@ const loginSchema = z.object({
 type LoginFormData = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -29,6 +32,7 @@ export default function LoginPage() {
 
   const onSubmit = async (data: LoginFormData) => {
     reset(data);
+    router.push("/");
   };
 
   return (

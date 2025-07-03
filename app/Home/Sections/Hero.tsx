@@ -1,4 +1,5 @@
 import React from "react";
+import * as motion from "motion/react-client";
 
 import Image from "next/image";
 import { PrimaryButton, SecondaryButton } from "@/components/ui/Button";
@@ -12,12 +13,21 @@ import StudentSportlight from "./StudentSportlight";
 
 import ParentReview from "./ParentReview";
 import WhatMakesUsDifferent from "./WhatMakesUsDifferent";
+import InteractiveParagraph from "@/utils/InteractiveParagraph";
 
 const HomePage = () => {
+  const myParagraph =
+    "We&apos;re laying the foundation for the next generation of pioneers in Software Engineering, AI, and Blockchain.";
+
   return (
     <main className="h-fit  px-[20px] md:px-[72px] md:h-fit pt-[96px]">
       <section className="w-full flex justify-between items-center md:h-[640px] ">
-        <div className=" space-y-[27px] md:space-y-[46.16px]">
+        <motion.div
+          initial={{ x: -1000 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+          className="space-y-[27px] md:space-y-[46.16px]"
+        >
           <div className="w-[351px] h-[157px] md:w-[450px] md:h-[278px]">
             <h1 className="font-sans font-medium text-[35px] leading-[40px] tracking-normal align-middle md:text-[57.95px] md:leading-[60px]">
               {" "}
@@ -30,8 +40,7 @@ const HomePage = () => {
           </div>
           <div className="w-[351px] h-[78px] max-w-[560px] md:w-[410px] md:h-[52px] md:max-w-[560px]">
             <p className="font-sans font-normal text-[15.75px] leading-[25.68px] tracking-normal align-middle text-light-yellow-70 md:text-[16.83px]">
-              We&apos;re laying the foundation for the next generation of
-              pioneers in Software Engineering, AI, and Blockchain.
+              <InteractiveParagraph text={myParagraph} />
             </p>
           </div>
           <div className="w-[262px] h-[24px] flex gap-1">
@@ -58,8 +67,13 @@ const HomePage = () => {
               <PrimaryButton title="Signup" width="103px" maxWidth="351px" />
             </Link>
           </div>
-        </div>
-        <div className=" hidden md:block relative ">
+        </motion.div>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className=" hidden md:block relative "
+        >
           <Image
             src="/careers-bg-image.webp.png"
             alt="careers-bg-image"
@@ -74,7 +88,7 @@ const HomePage = () => {
             width={405}
             className="max-w-[324px] absolute -inset-x-12 inset-y-40"
           />
-        </div>
+        </motion.div>
       </section>
       {/* MOBILE */}
       <Image

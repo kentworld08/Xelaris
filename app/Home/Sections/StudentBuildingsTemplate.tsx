@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { StudentBuildingData } from "@/components/ContentData";
 import { PrimaryButton } from "@/components/ui/Button";
+import InteractiveParagraph from "@/utils/InteractiveParagraph";
 
 const StudentBuildings = () => {
   return (
@@ -42,7 +43,9 @@ const StudentBuildings = () => {
                 </h1>
                 <div className="w-full md:w-[554.05px] h-fit md:h-fit pt-[9.28px] gap-[14.85px]">
                   <p className="font-serif font-light italic text-[16.5px] leading-[16.19px] -tracking-[0.33px] align-middle text-light-yellow-70 whitespace-pre-wrap w-[365px] md:text-[17.49px] md:leading-[17.49px] md:-tracking-[0.36px]">
-                    <span className="hidden md:block"> {summary1}</span>
+                    <span className="hidden md:block">
+                      <InteractiveParagraph text={summary1} />
+                    </span>
                     <span className="block w-[349px] md:hidden leading-[21px]">
                       {" "}
                       {mobile1}
@@ -50,7 +53,11 @@ const StudentBuildings = () => {
                   </p>
                   <br />
                   <p className="font-sans font-normal text-[14px] leading-[21px] tracking-normal align-middle text-light-yellow-70 pb-[0.54px] whitespace-pre-wrap md:text-[14.98px] md:leading-[22.68px]">
-                    <span className="hidden md:block"> {summary2}</span>
+                    <span className="hidden md:block">
+                      {" "}
+                      <InteractiveParagraph text={summary2} />
+                    </span>
+
                     <span className="block md:hidden"> {mobile2}</span>
                   </p>
                   <br />
