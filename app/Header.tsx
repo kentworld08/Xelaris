@@ -49,18 +49,16 @@ const Header = () => {
         <nav className="hidden md:flex flex-grow justify-center">
           <ul className="flex space-x-8">
             <li
-              className="flex gap-2 relative"
+              className="flex gap-2 relative align-middle justify-center items-center"
               onMouseEnter={() => handleMouseEnter("company")}
               onMouseLeave={handleMouseLeave}
             >
               <p className="font-inter font-normal text-[15.88px] leading-[24px] tracking-normal align-middle text-white font-sans">
                 Company
               </p>
-              <sub>
-                {" "}
-                <RiArrowDropDownLine size={30} />
-              </sub>
-              {/* Dropdown */}
+
+              <RiArrowDropDownLine size={30} />
+
               <div
                 className={`
             absolute left-0 top-full mt-2 w-48 bg-white rounded-md shadow-lg z-50
@@ -88,17 +86,14 @@ const Header = () => {
             </li>
 
             <li
-              className="flex gap-2 relative"
+              className="flex gap-2 relative align-middle justify-center items-center"
               onMouseEnter={() => handleMouseEnter("school")}
               onMouseLeave={handleMouseLeave}
             >
               <p className="font-inter font-normal text-[15.88px] leading-[24px] tracking-normal align-middle text-white font-sans cursor-pointer">
                 School
               </p>
-              <sub>
-                {" "}
-                <RiArrowDropDownLine size={30} />
-              </sub>
+              <RiArrowDropDownLine size={30} />
               {/* Dropdown */}
               <div
                 className={`

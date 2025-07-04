@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import * as motion from "motion/react-client";
 
 const ContactUs = () => {
   return (
@@ -11,7 +12,12 @@ const ContactUs = () => {
           touch
         </span>
       </h1>
-      <div className="flex flex-col gap-[36px] md:flex-row mt-[79px]">
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="flex flex-col gap-[36px] md:flex-row mt-[79px]"
+      >
         <div className="w-[326x] h-[324.13px] rounded-[8px] pt-[40px] pb-[50px] px-[32px] bg-light md:w-[384px] md:h-[328px]">
           <div className="gap-[23px] flex flex-col">
             <Image src="/message.png" alt="message" height={20.25} width={23} />
@@ -59,7 +65,7 @@ const ContactUs = () => {
             />
           </p>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 };

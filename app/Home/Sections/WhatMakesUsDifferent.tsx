@@ -31,29 +31,44 @@ const WhatMakesUsDifferent = () => {
             </button>
           </Link>
         </motion.div>
-        <div className="space-y-[10px] mt-[67px]">
-          {WhatMakesUsDifferentData.map(({ title, paragraph }, index) => (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              exit={{ opacity: 0, scale: 0.5 }}
-              key={title + "" + index}
-              className="bg-[#F2F0EB] w-full md:w-[601px] h-fit md:h-[205px] py-[25px] px-[30px]"
-            >
-              <div className="flex flex-col md:flex-row justify-between gap-4">
-                <h1 className="w-full md:w-[186px] h-fit md:h-[96px] font-sans font-bold text-[22.75px] leading-[24.2px] tracking-normal text-[#1D1F24]">
-                  {title}
-                </h1>
-                <p className="w-[267px] font-sans font-normal text-[14.5px] leading-[19.2pxx] -tracking-[0.32px] text-[#1D1F24]">
-                  {paragraph}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+        <div className="flex mt-[67px] gap-[35.5px]">
+          <div className="flex flex-col justify-center items-center">
+            <div className="w-[12px] h-[12px] bg-[#F2F1EB] rounded-full" />
+            <div className="h-[214.2px] bg-light w-[2px]" />
+            <div className="w-[12px] h-[12px] bg-[#F2F1EB] rounded-full" />
+            <div className="h-[214.2px] bg-light w-[2px]" />
+            <div className="w-[12px] h-[12px] bg-[#F2F1EB] rounded-full" />
+            <div className="h-[214.2px] bg-light w-[2px]" />
+            <div className="w-[12px] h-[12px] bg-[#F2F1EB] rounded-full" />
+            <div className="h-[214.2px] bg-light w-[2px]" />
+            <div className="w-[12px] h-[12px] bg-[#F2F1EB] rounded-full" />
+            <div className="h-[214.2px] bg-light w-[2px]" />
+            <div className="w-[12px] h-[12px] bg-[#F2F1EB] rounded-full" />
+          </div>
+          <div className="space-y-[10px] ">
+            {WhatMakesUsDifferentData.map(({ title, paragraph }, index) => (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }}
+                exit={{ opacity: 0, scale: 0.5 }}
+                key={title + "" + index}
+                className="bg-[#F2F0EB] w-full md:w-[601px] h-fit md:h-[205px] py-[25px] px-[30px]"
+              >
+                <div className="flex flex-col md:flex-row justify-between gap-4">
+                  <h1 className="w-full md:w-[186px] h-fit md:h-[96px] font-sans font-bold text-[22.75px] leading-[24.2px] tracking-normal text-[#1D1F24]">
+                    {title}
+                  </h1>
+                  <p className="w-[267px] font-sans font-normal text-[14.5px] leading-[19.2pxx] -tracking-[0.32px] text-[#1D1F24]">
+                    {paragraph}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
