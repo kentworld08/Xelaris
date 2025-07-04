@@ -23,9 +23,9 @@ const HomePage = () => {
     <main className="h-fit  px-[20px] md:px-[72px] md:h-fit pt-[96px]">
       <section className="w-full flex justify-between items-center md:h-[640px] ">
         <motion.div
-          initial={{ x: -1000 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.2, ease: "easeInOut" }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="space-y-[27px] md:space-y-[46.16px]"
         >
           <div className="w-[351px] h-[157px] md:w-[450px] md:h-[278px]">
@@ -70,7 +70,7 @@ const HomePage = () => {
         </motion.div>
         <motion.div
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          whileInView={{ scale: 1 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className=" hidden md:block relative "
         >

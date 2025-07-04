@@ -1,12 +1,18 @@
 import InteractiveParagraph from "@/utils/InteractiveParagraph";
 import React from "react";
+import * as motion from "motion/react-client";
 
 const StudentSportlight = () => {
   const myParagraph =
     "Celebrating the hard work, talent, and growth of our students as they excel in competitions and present their innovative projects.";
 
   return (
-    <section className="w-full h-fit gap-8 flex md:justify-between md:flex-row flex-col md:pb-[104px]">
+    <motion.section
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="w-full h-fit gap-8 flex md:justify-between md:flex-row flex-col md:pb-[104px]"
+    >
       <div className="w-full md:w-[495px] h-fit md:h-[1169px] space-y-[16px]">
         <div className="w-full md:w-[399px] h-fit md:h-[125.69px]">
           <h1 className="font-sans font-bold text-[28px] leading-[36.4px] tracking-normal align-middle text-[#F2F0EB] md:text-[60.3px] md:leading-[64px]">
@@ -23,7 +29,12 @@ const StudentSportlight = () => {
         </div>
       </div>
       <div className="space-y-[83.61px]">
-        <div className="bg-[#FAFF69] w-full md:w-[762px] h-fit md:h-[562px] p-5 md:p-10 space-y-[32px]">
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className="bg-[#FAFF69] w-full md:w-[762px] h-fit md:h-[562px] p-5 md:p-10 space-y-[32px]"
+        >
           <iframe
             src="https://www.youtube.com/embed/MPbl76Pck1Q?si=etmCos97sPMrtaxt"
             title="YouTube video player"
@@ -42,8 +53,13 @@ const StudentSportlight = () => {
               pay off at the state level makes us incredibly proud.
             </p>
           </div>
-        </div>
-        <div className="bg-[#FAFF69] w-full md:w-[762px] h-fit md:h-[562px] p-5 md:p-10 space-y-[32px]">
+        </motion.div>
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className="bg-[#FAFF69] w-full md:w-[762px] h-fit md:h-[562px] p-5 md:p-10 space-y-[32px]"
+        >
           <iframe
             src="https://www.youtube.com/embed/MPbl76Pck1Q?si=etmCos97sPMrtaxt"
             title="YouTube video player"
@@ -62,9 +78,9 @@ const StudentSportlight = () => {
               </span>
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

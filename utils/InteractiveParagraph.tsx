@@ -46,7 +46,7 @@ const AnimatedWord: React.FC<AnimatedWordProps> = ({
   const textColor = useTransform(
     distance,
     [0, 100], // Input range: distance from mouse (0 = mouse on word, 100 = 100px away)
-    [highlightColor, baseColor] // Output range: color (highlight when close, base when far)
+    [highlightColor, baseColor]
   );
 
   // Measure word position after component mounts/updates.
@@ -66,13 +66,13 @@ const AnimatedWord: React.FC<AnimatedWordProps> = ({
 
     // Re-calculate position on window resize AND SCROLL
     window.addEventListener("resize", updateWordPosition);
-    window.addEventListener("scroll", updateWordPosition); // <--- THIS IS THE MISSING LINE
+    window.addEventListener("scroll", updateWordPosition);
 
     return () => {
       window.removeEventListener("resize", updateWordPosition);
-      window.removeEventListener("scroll", updateWordPosition); // <--- AND THIS CLEANUP
+      window.removeEventListener("scroll", updateWordPosition);
     };
-  }, [wordRef, wordPositionX, wordPositionY]); // Added MotionValues to deps for ESLint satisfaction
+  }, [wordRef, wordPositionX, wordPositionY]);
 
   // Update distance whenever mouseX or mouseY changes, or if word's measured position changes
   useEffect(() => {
@@ -94,8 +94,8 @@ const AnimatedWord: React.FC<AnimatedWordProps> = ({
     // Subscribe to changes in mouseX, mouseY, wordPositionX, wordPositionY
     const unsubscribeMouseX = mouseX.onChange(updateDistance);
     const unsubscribeMouseY = mouseY.onChange(updateDistance);
-    const unsubscribeWordX = wordPositionX.onChange(updateDistance); // In case word's position dynamically changes
-    const unsubscribeWordY = wordPositionY.onChange(updateDistance); // In case word's position dynamically changes
+    const unsubscribeWordX = wordPositionX.onChange(updateDistance);
+    const unsubscribeWordY = wordPositionY.onChange(updateDistance);
 
     return () => {
       unsubscribeMouseX();
@@ -108,19 +108,14 @@ const AnimatedWord: React.FC<AnimatedWordProps> = ({
   return (
     <motion.span
       ref={wordRef}
-      // If it's a space, directly set its color to baseColor; otherwise, use the animated textColor
       style={{ color: isSpace ? baseColor : textColor }}
-      className="inline-block whitespace-pre" // THIS IS CRUCIAL: preserves all whitespace (multiple spaces, newlines)
+      className="inline-block whitespace-pre"
       transition={{ type: "spring", stiffness: 400, damping: 50 }}
     >
       {word}
     </motion.span>
   );
 };
-
-// ---
-// InteractiveParagraph Component (NO CHANGES NEEDED HERE)
-// ---
 
 interface InteractiveParagraphProps {
   text: string;
@@ -159,14 +154,6 @@ const InteractiveParagraph: React.FC<InteractiveParagraphProps> = ({
   }, [mouseX, mouseY]);
 
   return (
-    // Wrap the words in a paragraph element for proper text flow
-    // Note: If you want this to act as a proper <p> and wrap the words,
-    // you should change the wrapping fragment <> to <p className="your-styles">
-    // as per previous discussions. I'll leave it as <> for flexibility
-    // in case you're wrapping multiple paragraphs or other elements.
-    // However, if you are using the `children: React.ReactNode` prop on InteractiveParagraph,
-    // it's essential that this outer element (the <p> tag in InteractiveParagraph.tsx)
-    // is where the paragraph's styling for font-size, leading etc. is applied.
     <>
       {segments.map((segment, index) => (
         <AnimatedWord
@@ -174,9 +161,9 @@ const InteractiveParagraph: React.FC<InteractiveParagraphProps> = ({
           word={segment.content}
           mouseX={mouseX}
           mouseY={mouseY}
-          baseColor="#fffefab2" // Adjust to your desired default text color
-          highlightColor="#eee" // Adjust to your desired highlight color
-          isSpace={segment.isSpace} // Pass the new prop to distinguish words from spaces
+          baseColor="#fffefab2"
+          highlightColor="#eee"
+          isSpace={segment.isSpace}
         />
       ))}
     </>

@@ -1,5 +1,6 @@
 import StudentBuilding from "@/app/Home/Sections/StudentBuilding";
 import StudentBuildings from "@/app/Home/Sections/StudentBuildingsTemplate";
+import * as motion from "motion/react-client";
 import { MyCustomAccordion } from "@/components/ui/Accordion";
 import { SecondaryButton } from "@/components/ui/Button";
 import { AccordionItems, SchoolsData } from "@/components/ContentData";
@@ -11,7 +12,12 @@ const SchoolsTemplateContent = (spanText: string) => {
   );
   return (
     <main className="px-[20px] md:px-[72px] overflow-hidden">
-      <section className="py-[64px] gap-[64px] flex flex-col md:flex-row justify-between md:pt-[72px] items-center">
+      <motion.section
+        initial={{ scale: 0.5, opacity: 0, y: 200 }}
+        whileInView={{ scale: 1, opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="py-[64px] gap-[64px] flex flex-col md:flex-row justify-between md:pt-[72px] items-center"
+      >
         <div className="w-full h-[300px] gap-[20.38px] flex flex-col md:w-[712px] md:h-[351.51px] md:max-w-[872px] md:gap-[23.3px]">
           <div className="h-[86.38px] w-[388px] md:w-[560px] md:h-[153.22px]">
             <h1 className="font-sans font-medium text-[34.03px] leading-[43.2px] tracking-normal md:text-[57.95px] md:leading-[76.62px] text-light">
@@ -31,22 +37,41 @@ const SchoolsTemplateContent = (spanText: string) => {
             width="188px"
           />
         </div>
-        <Image
-          src={data?.imageurl1 ?? "/school.png"}
-          alt="Learn with us"
-          width={390}
-          height={420.33}
-          className="md:w-[720px] md:h-[776px]"
-        />
-      </section>
-      <section className="py-[48px] gap-[48px] flex flex-col md:flex-row">
-        <Image
-          src={data?.imageurl2 ?? "/panel-discussion.png"}
-          alt="panel discussion image"
-          width={351}
-          height={364.67}
-          className="md:w-[648px] md:h-[673.23px]"
-        />
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        >
+          <Image
+            src={data?.imageurl1 ?? "/school.png"}
+            alt="Learn with us"
+            width={390}
+            height={420.33}
+            className="md:w-[720px] md:h-[776px]"
+          />
+        </motion.div>
+      </motion.section>
+      <motion.section
+        initial={{ scale: 0.5, opacity: 0, y: 200 }}
+        whileInView={{ scale: 1, opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="py-[48px] gap-[48px] flex flex-col md:flex-row"
+      >
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        >
+          {" "}
+          <Image
+            src={data?.imageurl2 ?? "/panel-discussion.png"}
+            alt="panel discussion image"
+            width={351}
+            height={364.67}
+            className="md:w-[648px] md:h-[673.23px]"
+          />
+        </motion.div>
+
         <div className="md:w-[648px] md:pl-[97.19px] md:flex md:flex-col gap-[22.8px]">
           <h1 className="font-sans font-medium text-[28.26px] leading-[61.3px] tracking-normal text-light md:text-[47.31px] md:leading-[61.3px]">
             {data?.learn} &nbsp;
@@ -63,7 +88,7 @@ const SchoolsTemplateContent = (spanText: string) => {
             defaultOpenIndex={0}
           />
         </div>
-      </section>
+      </motion.section>
       <StudentBuilding />
       <StudentBuildings />
     </main>

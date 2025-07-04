@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState, useCallback } from "react";
+import * as motion from "motion/react-client";
 import Image from "next/image";
 import { IoChevronForwardCircleOutline } from "react-icons/io5";
 import Link from "next/link";
@@ -15,19 +16,17 @@ const WhatWeTeach = () => {
   const desktopCardWidth = 425;
   const cardGap = 25;
 
-  // Use a media query in JS to determine the active card width for scrolling
   const getActiveCardWidth = () => {
     if (typeof window !== "undefined") {
       return window.innerWidth < 768 ? mobileCardWidth : desktopCardWidth;
     }
-    return desktopCardWidth; // Default for server-side render or initial load
+    return desktopCardWidth;
   };
 
   const checkScrollability = useCallback(() => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       setCanScrollLeft(scrollLeft > 0);
-      // We subtract 1 to account for potential sub-pixel rendering differences
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
     }
   }, []);
@@ -36,8 +35,6 @@ const WhatWeTeach = () => {
     const container = scrollRef.current;
     if (container) {
       container.addEventListener("scroll", checkScrollability);
-      // Initial check on mount
-      // Use a timeout to ensure content has rendered and widths are calculated
       const timer = setTimeout(checkScrollability, 100);
 
       // Re-check on window resize
@@ -78,7 +75,12 @@ const WhatWeTeach = () => {
 
   return (
     <section className="px-[20px]">
-      <div className="w-full h-[304px] pt-[64px] pb-[64px] space-y-[12px]">
+      <motion.div
+        initial={{ scale: 0.5, opacity: 0, y: 200 }}
+        whileInView={{ scale: 1, opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="w-full h-[304px] pt-[64px] pb-[64px] space-y-[12px]"
+      >
         <div className="flex flex-col items-center md:flex-row md:gap-2 justify-center">
           <h1 className="font-sans font-medium text-[37.19px] leading-[50px] tracking-normal align-middle text-[#FFFEFA]">
             What we
@@ -94,9 +96,14 @@ const WhatWeTeach = () => {
             <InteractiveParagraph text={myParagraph2} />
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="w-full flex items-center justify-center relative">
+      <motion.div
+        initial={{ opacity: 0, y: 200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="w-full flex items-center justify-center relative"
+      >
         <button
           onClick={() => scroll("left")}
           className="absolute left-0 z-10 bg-black bg-opacity-50 p-2 rounded-full"
@@ -187,7 +194,7 @@ const WhatWeTeach = () => {
             strokeWidth={1}
           />
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 };

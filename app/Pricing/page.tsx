@@ -1,6 +1,7 @@
 import React from "react";
 import { PricingData } from "@/components/ContentData";
 import Link from "next/link";
+import * as motion from "motion/react-client";
 
 const Pricing = () => {
   return (
@@ -20,7 +21,10 @@ const Pricing = () => {
       <div className="flex flex-col md:flex-row gap-[42px] flex-wrap">
         {PricingData.map(
           ({ duration, price, timeframe, btntext, included, benefits }) => (
-            <div
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
               key={price}
               className="w-[358px] h-fit rounded-[4px] border-[0.3px] border-[#1F808D] bg-black24 md:w-[420px] md:h-[594px]"
             >
@@ -60,7 +64,7 @@ const Pricing = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           )
         )}
       </div>

@@ -1,9 +1,15 @@
 import React from "react";
 import { ParentReviewsCarousel } from "./ParentReviewSlid";
+import * as motion from "motion/react-client";
 
 const ParentReview = () => {
   return (
-    <section className="px-[20px] mt-[466px] md:mt-[135px]">
+    <motion.section
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="px-[20px] mt-[466px] md:mt-[135px]"
+    >
       <div className="flex justify-end">
         <div className="w-[60px] h-[18px] bg-[#1F808D]" />
         <div className="w-[6.63px] h-[18px] bg-[#EB001B]" />
@@ -27,7 +33,7 @@ const ParentReview = () => {
           <ParentReviewsCarousel />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

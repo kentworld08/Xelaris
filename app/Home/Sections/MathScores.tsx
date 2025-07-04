@@ -1,13 +1,19 @@
 import InteractiveParagraph from "@/utils/InteractiveParagraph";
 import Image from "next/image";
 import React from "react";
+import * as motion from "motion/react-client";
 
 const MathScores = () => {
   const myParagraph =
     "Zach`s MAP math scores went up 20% from last fall which is a phenomenal leap, from 75% percentile to 95% percentile achievement in math. We think it`s because of all the coding problem solving work. It`s the biannual test the students take to measure them against all other students in US based schools. Yes, they have a math performance break down and his problem solving skills were the highest section by a huge margin from coding of course.";
 
   return (
-    <section className="px-[20px] pt-[44.61px] pb-[64px] md:pb-[150px]">
+    <motion.section
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="px-[20px] pt-[44.61px] pb-[64px] md:pb-[150px]"
+    >
       <div className="w-full h-fit md:h-[113px] border-t-[1px] pt-[44.61px] pb-[64px] border-t-[#515151] hidden md:block" />
       <div className="w-full h-fit md:h-[604px] gap-[91px] flex flex-col md:flex-row justify-between items-center">
         <div className="space-y-[19px]">
@@ -24,7 +30,12 @@ const MathScores = () => {
             Alice Richardson
           </h3>
         </div>
-        <div className="flex flex-col gap-[23.97px] md:flex-row">
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className="flex flex-col gap-[23.97px] md:flex-row"
+        >
           <Image
             src="/tall-card.png"
             alt="div tall card"
@@ -39,9 +50,9 @@ const MathScores = () => {
             height={604}
             className="h-[553px] w-full md:w-[389px] md:h-[604px]"
           />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

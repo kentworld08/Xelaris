@@ -1,11 +1,17 @@
 import { WhatMakesUsDifferentData } from "@/components/ContentData";
 import Link from "next/link";
+import * as motion from "motion/react-client";
 
 const WhatMakesUsDifferent = () => {
   return (
     <section className="py-[116px]">
       <div className="flex flex-col md:flex-row justify-between items-center w-full ">
-        <div className="w-full space-y-[18px]">
+        <motion.div
+          initial={{ scale: 0.5, opacity: 0, y: 200 }}
+          whileInView={{ scale: 1, opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="w-full space-y-[18px]"
+        >
           <h2 className="font-sans font-normal text-[32.66px] leading-[36px] tracking-normal text-[#F2F0EB] md:text-[51.1px] md:leading-[70px]">
             What Makes Us <br />
             <span className="font-serif font-light italic text-[32.66px] leading-[36px] tracking-normal text-[#F2F0EB] md:text-[60.3px] md:leading-[70px]">
@@ -16,18 +22,25 @@ const WhatMakesUsDifferent = () => {
             This isn`t school. It`s a launchpad for the next generation of
             innovators.
           </p>
-          <Link href="/">
+          <Link href="/Form">
             <button
               type="button"
-              className="bg-[#FAFF69] text-[#1D1F24] font-bold py-2 px-4 rounded-[9999px] border-[1px] text-sm font-helvetica border-none"
+              className="bg-[#FAFF69] text-[#1D1F24] font-bold py-2 px-4 rounded-[9999px] border-[1px] text-sm font-helvetica border-none hover:opacity-90 cursor-pointer ease-in-out duration-75"
             >
               Book A Free Class
             </button>
           </Link>
-        </div>
+        </motion.div>
         <div className="space-y-[10px] mt-[67px]">
           {WhatMakesUsDifferentData.map(({ title, paragraph }, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              exit={{ opacity: 0, scale: 0.5 }}
               key={title + "" + index}
               className="bg-[#F2F0EB] w-full md:w-[601px] h-fit md:h-[205px] py-[25px] px-[30px]"
             >
@@ -39,7 +52,7 @@ const WhatMakesUsDifferent = () => {
                   {paragraph}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

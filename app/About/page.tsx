@@ -1,14 +1,20 @@
 import React from "react";
 import { TeamData } from "@/components/ContentData";
 import Image from "next/image";
+import * as motion from "motion/react-client";
 
 const AboutPage = () => {
   return (
     <main className="overflow-hidden pb-[90px]">
-      <section className="h-[488px] p-[64px] gap-[20px] w-full flex flex-col items-center justify-center  bg-[url('/aboutBg.png')] bg-cover bg-no-repeat bg-center md:h-[810px] px-[20px]">
+      <motion.section
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="h-[488px] p-[64px] gap-[20px] w-full flex flex-col items-center justify-center  bg-[url('/aboutBg.png')] bg-cover bg-no-repeat bg-center md:h-[810px] px-[20px]"
+      >
         <div className="w-[392px] h-[75px] flex justify-center md:w-[501px] md:h-[75px]">
           <h1 className="font-sans font-normal text-[25px] leading-[74.4px] -tracking-[0.24px] text-light md:-tracking-[3.2px] md:text-[48.32px]">
-            About
+            About&nbsp;
           </h1>{" "}
           &nbsp;
           <span className="font-serif font-light italic text-[35.9px] leading-[74.4px] -tracking-[0.24px] text-light md:-tracking-[3.2px] md:text-[60.3px]">
@@ -29,7 +35,7 @@ const AboutPage = () => {
             experiences tailored specifically for kids and teens.
           </p>
         </div>
-      </section>
+      </motion.section>
       <section className="px-[20px] md:px-[72px] ">
         <div className="w-[342px] h-[40px] mt-[74px] md:w-[213px] md:h-[85px]">
           <h1 className="font-sans font-normal text-[28px] leading-[40px] tracking-normal text-light md:text-[39.88px] md:-tracking-[0.85px] md:leading-[85px]">
@@ -48,7 +54,15 @@ const AboutPage = () => {
         </div>
         <div className="grid gap-[69px] md:grid-cols-2 lg:grid-3 xl:grid-cols-4 2xl:grid-cols-5">
           {TeamData.map((team, index) => (
-            <div
+            <motion.div
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                ease: "easeInOut",
+                duration: 0.5,
+              }}
               key={team.name + "" + index}
               className="border-[1px] border-[#E2E3D3] w-full md:w-[266px]"
             >
@@ -67,7 +81,7 @@ const AboutPage = () => {
                   {team.role}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

@@ -3,6 +3,7 @@ import React from "react";
 import { StudentBuildingData } from "@/components/ContentData";
 import { PrimaryButton } from "@/components/ui/Button";
 import InteractiveParagraph from "@/utils/InteractiveParagraph";
+import * as motion from "motion/react-client";
 
 const StudentBuildings = () => {
   return (
@@ -22,7 +23,13 @@ const StudentBuildings = () => {
           mobile1,
           mobile2,
         }) => (
-          <section className="pb-[48px] md:pb-[216px] " key={index}>
+          <motion.section
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="pb-[48px] md:pb-[216px] "
+            key={index}
+          >
             <hr className="border-[#FFFEFA80] mb-4 hidden md:block" />
             <div className="w-full flex gap-4">
               {index}
@@ -69,15 +76,21 @@ const StudentBuildings = () => {
                   </div>
                 </div>
               </div>
-              <Image
-                src={imageUrl}
-                alt={label1 + "" + label2}
-                height={540}
-                width={615.61}
-                className="w-[351px] h-[306.67px] pb-[21px] md:w-[615.61px] md:h-[540px]"
-              />
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+              >
+                <Image
+                  src={imageUrl}
+                  alt={label1 + "" + label2}
+                  height={540}
+                  width={615.61}
+                  className="w-[351px] h-[306.67px] pb-[21px] md:w-[615.61px] md:h-[540px]"
+                />
+              </motion.div>
             </div>
-          </section>
+          </motion.section>
         )
       )}
     </div>

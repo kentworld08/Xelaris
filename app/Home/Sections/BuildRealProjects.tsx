@@ -1,5 +1,6 @@
 import InteractiveParagraph from "@/utils/InteractiveParagraph";
 import Image from "next/image";
+import * as motion from "motion/react-client";
 
 const BuildRealProjects = () => {
   const myParagraph =
@@ -8,7 +9,12 @@ const BuildRealProjects = () => {
     <section className="mt-[95.59px] p-[72px] flex flex-col justify-between items-center px-[20px] md:flex-row">
       <div>
         {" "}
-        <div className="w-full space-y-[13px]">
+        <motion.div
+          initial={{ scale: 0.5, opacity: 0, y: 200 }}
+          whileInView={{ scale: 1, opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="w-full space-y-[13px]"
+        >
           <h5 className="font-sans font-semibold text-[14.98px] leading-[22.68px] tracking-normal align-middle text-light-yellow-70 w-full">
             Software | AI | Blockchain
           </h5>
@@ -24,15 +30,21 @@ const BuildRealProjects = () => {
           <p className="w-full font-sans font-normal text-[16px] leading-[22.68px] tracking-normal align-middle text-light-yellow-70 md:w-[539px]">
             <InteractiveParagraph text={myParagraph} />
           </p>
-        </div>
+        </motion.div>
       </div>
-      <Image
-        src="/panel-discussion.png"
-        alt="panel discussion"
-        height={550.8}
-        width={648}
-        className="mt-[48px]"
-      />
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+      >
+        <Image
+          src="/panel-discussion.png"
+          alt="panel discussion"
+          height={550.8}
+          width={648}
+          className="mt-[48px]"
+        />
+      </motion.div>
     </section>
   );
 };
